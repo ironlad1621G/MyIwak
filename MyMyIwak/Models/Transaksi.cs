@@ -9,7 +9,7 @@ namespace MyMyIwak.Models
         private StatusPembayaran statusPembayaran;
         private long totalPembayaran;
         
-        public Transaksi(int id_transaksi,int id_akun, DateTime tanggal, MetodePembayaran metodePembayaran, StatusPembayaran statusPembayaran, long totalPembayaran)
+        public Transaksi(int id_transaksi, int id_akun, DateTime tanggal, MetodePembayaran metodePembayaran, StatusPembayaran statusPembayaran, long totalPembayaran)
         {
             this.id_transaksi = id_transaksi;
             this.id_akun = id_akun;
@@ -19,12 +19,35 @@ namespace MyMyIwak.Models
             this.totalPembayaran = totalPembayaran;
         }
 
-        public int idTransaksi => id_transaksi;
-        public int idAkun => id_akun;
+        public int IdTransaksi => id_transaksi;
+        public int IdAkun => id_akun;
         public DateTime Tanggal => tanggal;
         public MetodePembayaran MetodePembayaran => metodePembayaran;
         public StatusPembayaran StatusPembayaran => statusPembayaran;
         public long TotalPembayaran => totalPembayaran;
+
+        private readonly List<Detailtransaksi> detail = new();
+
+        public IReadOnlyList<Detailtransaksi> Detail => detail;
+
+        public void TambahDetail(Detailtransaksi d)
+        {
+            if (d == null)
+            {
+                throw new ArgumentNullException(nameof(d));
+            }
+            detail.Add(d);
+        }
+
+        public long HitungSubtotal()
+        {
+            long total = 0;
+            foreach (var d in detail)
+            {
+                total += d.HitungSubTotal();
+            }
+            return total;
+        }
 
 
         public static readonly TimeSpan BatasPembayaran = TimeSpan.FromHours(24);
