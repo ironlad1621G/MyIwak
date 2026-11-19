@@ -28,22 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             tbUsername = new TextBox();
             tbPassword = new TextBox();
             label3 = new Label();
             label4 = new Label();
+            btnLogin = new Button();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
             // 
             // label2
             // 
@@ -67,7 +58,7 @@
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(375, 241);
+            tbPassword.Location = new Point(375, 225);
             tbPassword.Name = "tbPassword";
             tbPassword.Size = new Size(347, 27);
             tbPassword.TabIndex = 3;
@@ -88,11 +79,22 @@
             label4.AutoSize = true;
             label4.BackColor = Color.White;
             label4.FlatStyle = FlatStyle.System;
-            label4.Location = new Point(375, 218);
+            label4.Location = new Point(375, 202);
             label4.Name = "label4";
             label4.Size = new Size(70, 20);
             label4.TabIndex = 5;
             label4.Text = "Password";
+            // 
+            // btnLogin
+            // 
+            btnLogin.BackColor = Color.FromArgb(255, 128, 0);
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Location = new Point(375, 268);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(347, 29);
+            btnLogin.TabIndex = 6;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = false;
             // 
             // FormLogin
             // 
@@ -101,12 +103,12 @@
             BackgroundImage = Properties.Resources.Login__2_;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnLogin);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(tbPassword);
             Controls.Add(tbUsername);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "FormLogin";
             Text = "FormLogin";
             ResumeLayout(false);
@@ -114,12 +116,11 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private TextBox tbUsername;
         private TextBox tbPassword;
         private Label label3;
         private Label label4;
+        private Button btnLogin;
     }
 }

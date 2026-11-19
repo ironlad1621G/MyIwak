@@ -42,6 +42,7 @@
             label7 = new Label();
             textBox1 = new TextBox();
             label8 = new Label();
+            btnDaftar = new Button();
             SuspendLayout();
             // 
             // textBox2
@@ -173,9 +174,20 @@
             label8.FlatStyle = FlatStyle.System;
             label8.Location = new Point(370, 327);
             label8.Name = "label8";
-            label8.Size = new Size(70, 20);
+            label8.Size = new Size(145, 20);
             label8.TabIndex = 15;
-            label8.Text = "Password";
+            label8.Text = "Konfirmasi Password";
+            // 
+            // btnDaftar
+            // 
+            btnDaftar.BackColor = Color.FromArgb(255, 128, 0);
+            btnDaftar.FlatStyle = FlatStyle.Flat;
+            btnDaftar.Location = new Point(372, 391);
+            btnDaftar.Name = "btnDaftar";
+            btnDaftar.Size = new Size(359, 29);
+            btnDaftar.TabIndex = 16;
+            btnDaftar.Text = "Daftar";
+            btnDaftar.UseVisualStyleBackColor = false;
             // 
             // FormDaftar
             // 
@@ -184,6 +196,7 @@
             BackgroundImage = Properties.Resources.Login__2_;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnDaftar);
             Controls.Add(label8);
             Controls.Add(textBox1);
             Controls.Add(label7);
@@ -219,5 +232,6 @@
         private Label label7;
         private TextBox textBox1;
         private Label label8;
+        private Button btnDaftar;
     }
 }
