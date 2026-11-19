@@ -22,22 +22,63 @@ namespace MyMyIwak.Models
         public string Jenis
         {
             get { return jenis; }
-            set { jenis = value; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Jenis ikan tidak boleh kosong");
+                }
+                else
+                {
+                    jenis = value;
+                }
+            }
         }
         public string Warna
         {
             get { return warna; }
-            set { warna = value; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Warna ikan tidak boleh kosong");
+                }
+                else
+                {
+                    warna = value;
+                }
+            }
         }
         public int Umur_bulan
         {
             get { return umur_bulan; }
-            set { umur_bulan = value; }
+            set
+            {
+                if (value >= 0)
+                {
+                    umur_bulan = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Umur tidak mungkin kurang dari 0");
+                }
+            }
         }
         public int Stok
         {
             get { return stok; }
-            private set { stok = value; }
+            private set
+            {
+                if (value >= 0)
+                {
+                    stok = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Stok tidak boleh kurang dari 0");
+                }
+            }
+            
         }
         public string Deskripsi
         {
@@ -58,6 +99,35 @@ namespace MyMyIwak.Models
             this.Stok = stok;
             this.Deskripsi = deskripsi;
             this.Is_active = is_active;
+        }
+        public void TambahStok(int jumlah)
+        {
+            if (jumlah > 0)
+            {
+                Stok += jumlah;
+            }
+            else
+            {
+                throw new ArgumentException("Jumlah yang ditambahkan harus lebih besar dari 0");
+            }
+        }
+        public void KurangiStok(int jumlah)
+        {
+            if (jumlah > 0)
+            {
+                if (Stok - jumlah >= 0)
+                {
+                    Stok -= jumlah;
+                }
+                else
+                {
+                    throw new ArgumentException("Stok tidak boleh kurang dari 0");
+                }
+            }
+            else
+            {
+                throw new ArgumentException("Jumlah yang dikurangi harus lebih besar dari 0");
+            }
         }
     }
 }

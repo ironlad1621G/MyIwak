@@ -31,7 +31,17 @@ namespace MyMyIwak.Models
         public string Komentare
         {
             get { return komentar; }
-            set { komentar = value; }
+            private set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Komentar tidak boleh kosong");
+                }
+                else
+                {
+                    komentar = value;
+                }
+            }
         }
         public DateTime Waktu_komentar
         {
@@ -51,6 +61,15 @@ namespace MyMyIwak.Models
             this.Komentare = komentar;
             this.Waktu_komentar = waktu_komentar;
             this.Is_active = is_active;
+        }
+        public void UpdateKomentar(string komentar)
+        {
+            this.Komentare = komentar;
+            this.Waktu_komentar = DateTime.Now;
+        }
+        public void HapusKomentar()
+        {
+            this.Is_active = false;
         }
     }
 }

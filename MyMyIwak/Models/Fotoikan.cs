@@ -23,7 +23,17 @@ namespace MyMyIwak.Models
         public string Gambar
         {
             get { return gambar; }
-            set { gambar = value; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Gambar tidak boleh kosong");
+                }
+                else
+                {
+                    gambar = value;
+                }
+            }
         }
         public FotoIkan(int id_foto_ikan,int id_ikan, string gambar)
         {

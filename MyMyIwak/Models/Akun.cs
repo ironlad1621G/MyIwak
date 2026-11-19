@@ -23,27 +23,77 @@ namespace MyMyIwak.Models
         public string Username
         {
             get { return username; }
-            private set { username = value; }
+            private set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Username tidak boleh kosong");
+                }
+                else
+                {
+                    username = value;
+                }
+            }
         }
         public string Nama_lengkap
         {
             get { return nama_lengkap; }
-            private set { nama_lengkap = value; }
+            private set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Nama lengkap tidak boleh kosong");
+                }
+                else
+                {
+                    nama_lengkap = value;
+                }
+            }
         }
         public string Password
         {
             get { return password; }
-            private set { password = value; }
+            private set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Password tidak boleh kosong");
+                }
+                else
+                {
+                    password = value;
+                }
+            }
         }
         public string No_telepon
         {
             get { return no_telepon; }
-            private set { no_telepon = value; }
+            private set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Nomor telepon tidak boleh kosong");
+                }
+                else
+                {
+                    no_telepon = value;
+                }
+            }
         }
         public string Alamat
         {
             get { return alamat; }
-            private set { alamat = value; }
+            private set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Alamat tidak boleh kosong");
+                }
+                else
+                {
+                    alamat = value;
+                }
+            }
         }
         public string Role
         {

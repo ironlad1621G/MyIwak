@@ -29,14 +29,46 @@ namespace MyMyIwak.Models
         public int Jumlah
         {
             get { return jumlah; }
-            private set { jumlah = value; }
+            private set
+            {
+                if (value > 0)
+                {
+                    jumlah = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Jumlah harus lebih dari 0");
+                }
+            }
         }
         public Keranjang(int id_keranjang, int id_ikan, int id_akun, int jumlah)
         {
-            this.id_keranjang = id_keranjang;
-            this.id_ikan = id_ikan;
-            this.id_akun = id_akun;
-            this.jumlah = jumlah;
+            this.Id_keranjang = id_keranjang;
+            this.Id_ikan = id_ikan;
+            this.Id_akun = id_akun;
+            this.Jumlah = jumlah;
+        }
+        public void TambahJumlah(int jumlah)
+        {
+            if (jumlah > 0)
+            {
+                this.Jumlah += jumlah;
+            }
+            else
+            {
+                throw new ArgumentException("Jumlah harus lebih dari 0");
+            }
+        }
+        public void KurangiJumlah(int jumlah)
+        {
+            if (jumlah > 0 && this.Jumlah - jumlah >= 0)
+            {
+                this.Jumlah -= jumlah;
+            }
+            else
+            {
+                throw new ArgumentException("Jumlah harus lebih dari 0 dan tidak boleh kurang dari 0");
+            }
         }
     }
 }
