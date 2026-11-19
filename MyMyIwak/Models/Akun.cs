@@ -1,28 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace MyMyIwak.Models
 {
-    internal class Akun
+    internal abstract class Akun : EntitasAktif
     {
-        private int id_akun;
-        private string username;
-        private string nama_lengkap;
-        private string password;
-        private string no_telepon;
-        private string alamat;
-        private string role;
-        private Boolean is_active;
+        private string username = "";
+        private string nama_lengkap = "";
+        private string password = "";
+        private string no_telepon = "";
+        private string alamat = "";
 
         public int Id_akun
         {
-            get { return id_akun; }
-<<<<<<< HEAD
-            private set {id_akun = value; }
-=======
-            private set { id_akun = value; }
->>>>>>> 37ead02ac043db78167591ad81e0985ee6c30c6b
+            get { return Id; }
         }
         public string Username
         {
@@ -51,21 +39,6 @@ namespace MyMyIwak.Models
                 else
                 {
                     nama_lengkap = value;
-                }
-            }
-        }
-        public string Password
-        {
-            get { return password; }
-            private set
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    throw new ArgumentException("Password tidak boleh kosong");
-                }
-                else
-                {
-                    password = value;
                 }
             }
         }
@@ -99,26 +72,52 @@ namespace MyMyIwak.Models
                 }
             }
         }
-        public string Role
+
+        public abstract Role Role { get; }
+
+        protected Akun(int id_akun, string username, string nama_lengkap, string password, string no_telepon, string alamat, bool is_active)
+            : base(id_akun, is_active)
         {
-            get { return role; }
-            private set { role = value; }
-        }
-        public Boolean Is_active
-        {
-            get { return is_active; }
-            private set { is_active = value; }
-        }
-        public Akun(int id_akun, string username, string nama_lengkap, string password, string no_telepon, string alamat, string role, Boolean is_active)
-        {
-            this.Id_akun = id_akun;
             this.Username = username;
             this.Nama_lengkap = nama_lengkap;
-            this.Password = password;
+            SetPassword(password);
             this.No_telepon = no_telepon;
             this.Alamat = alamat;
-            this.Role = role;
-            this.Is_active = is_active;
+        }
+
+        public bool CekPassword(string input)
+        {
+            return password == input;
+        }
+
+        public void GantiPassword(string password_lama, string password_baru)
+        {
+            if (!CekPassword(password_lama))
+            {
+                throw new InvalidOperationException("Password lama salah");
+            }
+            SetPassword(password_baru);
+        }
+
+        public void UbahProfil(string nama_lengkap, string no_telepon, string alamat)
+        {
+            this.Nama_lengkap = nama_lengkap;
+            this.No_telepon = no_telepon;
+            this.Alamat = alamat;
+        }
+
+        private void SetPassword(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new ArgumentException("Password tidak boleh kosong");
+            }
+            password = value;
+        }
+
+        public override string Deskripsikan()
+        {
+            return $"[{Role}] {Nama_lengkap} (@{Username})";
         }
     }
 }

@@ -4,16 +4,14 @@ using System.Text;
 
 namespace MyMyIwak.Models
 {
-    internal class FotoIkan
+    internal class FotoIkan : Entitas
     {
-        private int id_foto_ikan;
         private int id_ikan;
-        private string gambar;
+        private string gambar = "";
 
         public int Id_foto_ikan
         {
-            get { return id_foto_ikan; }
-            private set { id_foto_ikan = value; }
+            get { return Id; }
         }
         public int Id_ikan
         {
@@ -35,11 +33,15 @@ namespace MyMyIwak.Models
                 }
             }
         }
-        public FotoIkan(int id_foto_ikan,int id_ikan, string gambar)
+        public FotoIkan(int id_foto_ikan, int id_ikan, string gambar) : base(id_foto_ikan)
         {
-            this.Id_foto_ikan = id_foto_ikan;
             this.Id_ikan = id_ikan;
             this.Gambar = gambar;
+        }
+
+        public override string Deskripsikan()
+        {
+            return $"Foto #{Id} untuk ikan #{Id_ikan}: {Gambar}";
         }
     }
 }

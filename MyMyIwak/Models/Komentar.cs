@@ -4,19 +4,16 @@ using System.Text;
 
 namespace MyMyIwak.Models
 {
-    internal class Komentar
+    internal class Komentar : EntitasAktif
     {
-        private int id_komentar;
         private int id_akun;
         private int id_ikan;
-        private string komentar;
+        private string isi = "";
         private DateTime waktu_komentar;
-        private Boolean is_active;
 
         public int Id_komentar
         {
-            get { return id_komentar; }
-            private set { id_komentar = value; }
+            get { return Id; }
         }
         public int Id_akun
         {
@@ -28,9 +25,9 @@ namespace MyMyIwak.Models
             get { return id_ikan; }
             private set { id_ikan = value; }
         }
-        public string Komentare
+        public string Isi
         {
-            get { return komentar; }
+            get { return isi; }
             private set
             {
                 if (string.IsNullOrEmpty(value))
@@ -39,7 +36,7 @@ namespace MyMyIwak.Models
                 }
                 else
                 {
-                    komentar = value;
+                    isi = value;
                 }
             }
         }
@@ -48,28 +45,27 @@ namespace MyMyIwak.Models
             get { return waktu_komentar; }
             private set { waktu_komentar = value; }
         }
-        public Boolean Is_active
-        {
-            get { return is_active; }
-            private set { is_active = value; }
-        }
         public Komentar(int id_komentar, int id_akun, int id_ikan, string komentar, DateTime waktu_komentar, Boolean is_active)
+            : base(id_komentar, is_active)
         {
-            this.Id_komentar = id_komentar;
             this.Id_akun = id_akun;
             this.Id_ikan = id_ikan;
-            this.Komentare = komentar;
+            this.Isi = komentar;
             this.Waktu_komentar = waktu_komentar;
-            this.Is_active = is_active;
         }
         public void UpdateKomentar(string komentar)
         {
-            this.Komentare = komentar;
+            this.Isi = komentar;
             this.Waktu_komentar = DateTime.Now;
         }
         public void HapusKomentar()
         {
-            this.Is_active = false;
+            Nonaktifkan();
+        }
+
+        public override string Deskripsikan()
+        {
+            return $"Komentar #{Id} oleh akun #{Id_akun} ({Waktu_komentar:dd/MM/yyyy HH:mm}): {Isi}";
         }
     }
 }

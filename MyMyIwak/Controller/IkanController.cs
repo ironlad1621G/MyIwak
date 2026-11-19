@@ -65,6 +65,16 @@ namespace MyMyIwak.Controllers
             repository.Update(ikan);
         }
 
+        public void UbahHarga(Role peran, int id_ikan, long harga_baru)
+        {
+            PastikanPengelola(peran);
+            Ikan ikan = AmbilIkanAktif(id_ikan);
+
+            ikan.Harga = harga_baru;
+
+            repository.Update(ikan);
+        }
+
         public void HapusIkan(Role peran, int id_ikan)
         {
             PastikanPengelola(peran);

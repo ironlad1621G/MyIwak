@@ -4,20 +4,18 @@ using System.Text;
 
 namespace MyMyIwak.Models
 {
-    public class Ikan
+    public class Ikan : EntitasAktif
     {
-        private int id_ikan;
-        private string jenis;
-        private string warna;
+        private string jenis = "";
+        private string warna = "";
         private int umur_bulan;
         private int stok;
-        private string deskripsi;
-        private Boolean is_active;
+        private long harga;
+        private string deskripsi = "";
 
         public int Id_ikan
         {
-            get { return id_ikan; }
-            private set { id_ikan = value; }
+            get { return Id; }
         }
         public string Jenis
         {
@@ -80,25 +78,35 @@ namespace MyMyIwak.Models
             }
             
         }
+        public long Harga
+        {
+            get { return harga; }
+            set
+            {
+                if (value >= 0)
+                {
+                    harga = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Harga tidak boleh kurang dari 0");
+                }
+            }
+        }
         public string Deskripsi
         {
             get { return deskripsi; }
             set { deskripsi = value; }
         }
-        public Boolean Is_active
+        public Ikan(int id_ikan, string jenis, string warna, int umur_bulan, int stok, long harga, string deskripsi, Boolean is_active)
+            : base(id_ikan, is_active)
         {
-            get { return is_active; }
-            private set { is_active = value; }
-        }
-        public Ikan(int id_ikan, string jenis, string warna, int umur_bulan, int stok, string deskripsi, Boolean is_active)
-        {
-            this.Id_ikan = id_ikan;
             this.Jenis = jenis;
             this.Warna = warna;
             this.Umur_bulan = umur_bulan;
             this.Stok = stok;
+            this.Harga = harga;
             this.Deskripsi = deskripsi;
-            this.Is_active = is_active;
         }
         public void TambahStok(int jumlah)
         {
@@ -129,13 +137,18 @@ namespace MyMyIwak.Models
                 throw new ArgumentException("Jumlah yang dikurangi harus lebih besar dari 0");
             }
         }
-        public void Nonaktifkan()
+        public override void Nonaktifkan()
         {
             if (!Is_active)
             {
                 throw new InvalidOperationException("Ikan ini sudah dihapus.");
             }
-            Is_active = false;
+            base.Nonaktifkan();
+        }
+
+        public override string Deskripsikan()
+        {
+            return $"Ikan {Jenis} ({Warna}, {Umur_bulan} bln) - Rp {Harga:N0} - stok {Stok}";
         }
     }
 }
