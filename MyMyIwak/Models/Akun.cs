@@ -18,7 +18,11 @@ namespace MyMyIwak.Models
         public int Id_akun
         {
             get { return id_akun; }
+<<<<<<< HEAD
             private set {id_akun = value; }
+=======
+            private set { id_akun = value; }
+>>>>>>> 37ead02ac043db78167591ad81e0985ee6c30c6b
         }
         public string Username
         {
