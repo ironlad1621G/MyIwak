@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="koneksi.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="koneksi.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Npgsql" Version="10.0.3" />
   </ItemGroup>
 
