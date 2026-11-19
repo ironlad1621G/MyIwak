@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyMyIwak.Models
 {
-    internal class Ikan
+    public class Ikan
     {
         private int id_ikan;
         private string jenis;
@@ -128,6 +128,14 @@ namespace MyMyIwak.Models
             {
                 throw new ArgumentException("Jumlah yang dikurangi harus lebih besar dari 0");
             }
+        }
+        public void Nonaktifkan()
+        {
+            if (!Is_active)
+            {
+                throw new InvalidOperationException("Ikan ini sudah dihapus.");
+            }
+            Is_active = false;
         }
     }
 }
