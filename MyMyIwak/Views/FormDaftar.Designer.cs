@@ -34,7 +34,7 @@
             tbPassword = new TextBox();
             tbKonfirmasiPassword = new TextBox();
             tbUsername = new TextBox();
-            button1 = new Button();
+            btnDatar = new Button();
             SuspendLayout();
             // 
             // tbNama
@@ -85,28 +85,36 @@
             tbUsername.Size = new Size(921, 65);
             tbUsername.TabIndex = 5;
             // 
-            // button1
+            // btnDatar
             // 
-            button1.Location = new Point(863, 913);
-            button1.Name = "button1";
-            button1.Size = new Size(922, 67);
-            button1.TabIndex = 6;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnDatar.BackColor = Color.FromArgb(255, 128, 0);
+            btnDatar.Cursor = Cursors.Hand;
+            btnDatar.FlatStyle = FlatStyle.Popup;
+            btnDatar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDatar.ForeColor = Color.White;
+            btnDatar.Location = new Point(863, 912);
+            btnDatar.Name = "btnDatar";
+            btnDatar.Size = new Size(922, 67);
+            btnDatar.TabIndex = 6;
+            btnDatar.Text = "Daftar";
+            btnDatar.UseVisualStyleBackColor = false;
+            btnDatar.Click += btnDatar_Click;
             // 
             // FormDaftar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Daftar;
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
-            Controls.Add(button1);
+            Controls.Add(btnDatar);
             Controls.Add(tbUsername);
             Controls.Add(tbKonfirmasiPassword);
             Controls.Add(tbPassword);
             Controls.Add(tbAlamat);
             Controls.Add(tbNoTelepon);
             Controls.Add(tbNama);
+            DoubleBuffered = true;
             Name = "FormDaftar";
             Text = "FormDaftar";
             ResumeLayout(false);
@@ -121,6 +129,6 @@
         private TextBox tbPassword;
         private TextBox tbKonfirmasiPassword;
         private TextBox tbUsername;
-        private Button button1;
+        private Button btnDatar;
     }
 }

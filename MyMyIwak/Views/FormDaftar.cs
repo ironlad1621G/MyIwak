@@ -14,5 +14,10 @@ namespace MyMyIwak.Views
         {
             InitializeComponent();
         }
+
+        private void btnDatar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

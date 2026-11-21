@@ -73,9 +73,29 @@ namespace MyMyIwak.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Daftar1 {
+        internal static System.Drawing.Bitmap DashboardOwner {
             get {
-                object obj = ResourceManager.GetObject("Daftar1", resourceCulture);
+                object obj = ResourceManager.GetObject("DashboardOwner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login {
+            get {
+                object obj = ResourceManager.GetObject("Login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sidebar {
+            get {
+                object obj = ResourceManager.GetObject("Sidebar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
