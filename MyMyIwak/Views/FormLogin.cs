@@ -14,5 +14,32 @@ namespace MyMyIwak.Views
         {
             InitializeComponent();
         }
+
+        private void PindahHalaman(Form formTujuan)
+        {
+            using (formTujuan)
+            {
+                formTujuan.ShowDialog(this);
+            }
+        }
+        private void btnKeluar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

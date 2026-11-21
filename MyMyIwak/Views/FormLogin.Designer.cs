@@ -31,6 +31,7 @@
             tbUsername = new TextBox();
             tbPassword = new TextBox();
             btnLogin = new Button();
+            btnKeluar = new Button();
             SuspendLayout();
             // 
             // tbUsername
@@ -40,6 +41,7 @@
             tbUsername.Name = "tbUsername";
             tbUsername.Size = new Size(921, 65);
             tbUsername.TabIndex = 1;
+            tbUsername.TextChanged += tbUsername_TextChanged;
             // 
             // tbPassword
             // 
@@ -48,6 +50,7 @@
             tbPassword.Name = "tbPassword";
             tbPassword.Size = new Size(921, 65);
             tbPassword.TabIndex = 2;
+            tbPassword.TextChanged += tbPassword_TextChanged;
             // 
             // btnLogin
             // 
@@ -62,6 +65,21 @@
             btnLogin.TabIndex = 7;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
+            // 
+            // btnKeluar
+            // 
+            btnKeluar.BackColor = Color.FromArgb(255, 128, 0);
+            btnKeluar.Cursor = Cursors.Hand;
+            btnKeluar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnKeluar.ForeColor = Color.White;
+            btnKeluar.Location = new Point(62, 947);
+            btnKeluar.Name = "btnKeluar";
+            btnKeluar.Size = new Size(131, 42);
+            btnKeluar.TabIndex = 8;
+            btnKeluar.Text = "Keluar";
+            btnKeluar.UseVisualStyleBackColor = false;
+            btnKeluar.Click += btnKeluar_Click;
             // 
             // FormLogin
             // 
@@ -70,6 +88,7 @@
             BackgroundImage = Properties.Resources.Login;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(btnKeluar);
             Controls.Add(btnLogin);
             Controls.Add(tbPassword);
             Controls.Add(tbUsername);
@@ -84,5 +103,6 @@
         private TextBox tbUsername;
         private TextBox tbPassword;
         private Button btnLogin;
+        private Button btnKeluar;
     }
 }

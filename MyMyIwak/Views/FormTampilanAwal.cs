@@ -15,12 +15,25 @@ namespace MyMyIwak.Views
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PindahHalaman(Form formTujuan)
         {
-
+            using (formTujuan)
+            {
+                formTujuan.ShowDialog(this);
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object? sender, EventArgs e)
+        {
+            PindahHalaman(new FormLogin());
+        }
+
+        private void button2_Click(object? sender, EventArgs e)
+        {
+            PindahHalaman(new FormDaftar());
+        }
+
+        private void FormTampilanAwal_Load(object sender, EventArgs e)
         {
 
         }

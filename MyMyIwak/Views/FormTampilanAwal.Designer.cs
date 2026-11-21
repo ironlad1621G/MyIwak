@@ -74,6 +74,7 @@
             DoubleBuffered = true;
             Name = "FormTampilanAwal";
             Text = "FormTampilanAwal";
+            Load += FormTampilanAwal_Load;
             ResumeLayout(false);
         }
 

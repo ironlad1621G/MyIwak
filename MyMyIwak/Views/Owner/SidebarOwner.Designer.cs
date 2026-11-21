@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            btnDashboard = new Button();
-            btnKelolaAkunAdmin = new Button();
-            btnKelolaInventarisIkan = new Button();
             btnLogout = new Button();
+            btnKelolaInventarisIkan = new Button();
+            btnKelolaAkunAdmin = new Button();
+            btnDashboard = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -44,34 +44,22 @@
             panel1.Controls.Add(btnKelolaInventarisIkan);
             panel1.Controls.Add(btnKelolaAkunAdmin);
             panel1.Controls.Add(btnDashboard);
-            panel1.Location = new Point(1, 3);
+            panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(494, 1077);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // btnDashboard
+            // btnLogout
             // 
-            btnDashboard.BackColor = Color.White;
-            btnDashboard.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDashboard.Location = new Point(68, 198);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(358, 68);
-            btnDashboard.TabIndex = 0;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = false;
-            btnDashboard.Click += btnDashboard_Click;
-            // 
-            // btnKelolaAkunAdmin
-            // 
-            btnKelolaAkunAdmin.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnKelolaAkunAdmin.Location = new Point(68, 286);
-            btnKelolaAkunAdmin.Name = "btnKelolaAkunAdmin";
-            btnKelolaAkunAdmin.Size = new Size(358, 68);
-            btnKelolaAkunAdmin.TabIndex = 1;
-            btnKelolaAkunAdmin.Text = "Kelola Akun Admin";
-            btnKelolaAkunAdmin.UseVisualStyleBackColor = true;
-            btnKelolaAkunAdmin.Click += btnKelolaAkunAdmin_Click;
+            btnLogout.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.Location = new Point(68, 993);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(101, 33);
+            btnLogout.TabIndex = 3;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnKelolaInventarisIkan
             // 
@@ -84,16 +72,28 @@
             btnKelolaInventarisIkan.UseVisualStyleBackColor = true;
             btnKelolaInventarisIkan.Click += btnKelolaInventarisIkan_Click;
             // 
-            // btnLogout
+            // btnKelolaAkunAdmin
             // 
-            btnLogout.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogout.Location = new Point(68, 993);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(101, 33);
-            btnLogout.TabIndex = 3;
-            btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = true;
-            btnLogout.Click += btnLogout_Click;
+            btnKelolaAkunAdmin.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnKelolaAkunAdmin.Location = new Point(68, 286);
+            btnKelolaAkunAdmin.Name = "btnKelolaAkunAdmin";
+            btnKelolaAkunAdmin.Size = new Size(358, 68);
+            btnKelolaAkunAdmin.TabIndex = 1;
+            btnKelolaAkunAdmin.Text = "Kelola Akun Admin";
+            btnKelolaAkunAdmin.UseVisualStyleBackColor = true;
+            btnKelolaAkunAdmin.Click += btnKelolaAkunAdmin_Click;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.White;
+            btnDashboard.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDashboard.Location = new Point(68, 198);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(358, 68);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // Sidebar
             // 

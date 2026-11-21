@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            sidebar1 = new SidebarOwner();
             SuspendLayout();
+            // 
+            // sidebar1
+            // 
+            sidebar1.Location = new Point(-4, -29);
+            sidebar1.Name = "sidebar1";
+            sidebar1.Size = new Size(497, 1080);
+            sidebar1.TabIndex = 0;
             // 
             // FormDashboardOwner
             // 
@@ -36,11 +44,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.DashboardOwner;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(sidebar1);
             Name = "FormDashboardOwner";
             Text = "FormDashboardOwner";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private SidebarOwner sidebar1;
     }
 }

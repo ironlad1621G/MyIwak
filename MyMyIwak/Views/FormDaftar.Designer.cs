@@ -34,7 +34,8 @@
             tbPassword = new TextBox();
             tbKonfirmasiPassword = new TextBox();
             tbUsername = new TextBox();
-            btnDatar = new Button();
+            btnDaftar = new Button();
+            btnKeluar = new Button();
             SuspendLayout();
             // 
             // tbNama
@@ -44,6 +45,7 @@
             tbNama.Name = "tbNama";
             tbNama.Size = new Size(921, 65);
             tbNama.TabIndex = 0;
+            tbNama.TextChanged += tbNama_TextChanged;
             // 
             // tbNoTelepon
             // 
@@ -52,6 +54,7 @@
             tbNoTelepon.Name = "tbNoTelepon";
             tbNoTelepon.Size = new Size(921, 65);
             tbNoTelepon.TabIndex = 1;
+            tbNoTelepon.TextChanged += tbNoTelepon_TextChanged;
             // 
             // tbAlamat
             // 
@@ -60,6 +63,7 @@
             tbAlamat.Name = "tbAlamat";
             tbAlamat.Size = new Size(921, 65);
             tbAlamat.TabIndex = 2;
+            tbAlamat.TextChanged += tbAlamat_TextChanged;
             // 
             // tbPassword
             // 
@@ -68,6 +72,7 @@
             tbPassword.Name = "tbPassword";
             tbPassword.Size = new Size(921, 65);
             tbPassword.TabIndex = 3;
+            tbPassword.TextChanged += tbPassword_TextChanged;
             // 
             // tbKonfirmasiPassword
             // 
@@ -76,6 +81,7 @@
             tbKonfirmasiPassword.Name = "tbKonfirmasiPassword";
             tbKonfirmasiPassword.Size = new Size(921, 65);
             tbKonfirmasiPassword.TabIndex = 4;
+            tbKonfirmasiPassword.TextChanged += tbKonfirmasiPassword_TextChanged;
             // 
             // tbUsername
             // 
@@ -84,21 +90,36 @@
             tbUsername.Name = "tbUsername";
             tbUsername.Size = new Size(921, 65);
             tbUsername.TabIndex = 5;
+            tbUsername.TextChanged += tbUsername_TextChanged;
             // 
-            // btnDatar
+            // btnDaftar
             // 
-            btnDatar.BackColor = Color.FromArgb(255, 128, 0);
-            btnDatar.Cursor = Cursors.Hand;
-            btnDatar.FlatStyle = FlatStyle.Popup;
-            btnDatar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDatar.ForeColor = Color.White;
-            btnDatar.Location = new Point(863, 912);
-            btnDatar.Name = "btnDatar";
-            btnDatar.Size = new Size(922, 67);
-            btnDatar.TabIndex = 6;
-            btnDatar.Text = "Daftar";
-            btnDatar.UseVisualStyleBackColor = false;
-            btnDatar.Click += btnDatar_Click;
+            btnDaftar.BackColor = Color.FromArgb(255, 128, 0);
+            btnDaftar.Cursor = Cursors.Hand;
+            btnDaftar.FlatStyle = FlatStyle.Popup;
+            btnDaftar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDaftar.ForeColor = Color.White;
+            btnDaftar.Location = new Point(863, 912);
+            btnDaftar.Name = "btnDaftar";
+            btnDaftar.Size = new Size(922, 67);
+            btnDaftar.TabIndex = 6;
+            btnDaftar.Text = "Daftar";
+            btnDaftar.UseVisualStyleBackColor = false;
+            btnDaftar.Click += btnDatar_Click;
+            // 
+            // btnKeluar
+            // 
+            btnKeluar.BackColor = Color.FromArgb(255, 128, 0);
+            btnKeluar.Cursor = Cursors.Hand;
+            btnKeluar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnKeluar.ForeColor = Color.White;
+            btnKeluar.Location = new Point(71, 956);
+            btnKeluar.Name = "btnKeluar";
+            btnKeluar.Size = new Size(131, 42);
+            btnKeluar.TabIndex = 9;
+            btnKeluar.Text = "Keluar";
+            btnKeluar.UseVisualStyleBackColor = false;
+            btnKeluar.Click += btnKeluar_Click;
             // 
             // FormDaftar
             // 
@@ -107,7 +128,8 @@
             BackgroundImage = Properties.Resources.Daftar;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1904, 1041);
-            Controls.Add(btnDatar);
+            Controls.Add(btnKeluar);
+            Controls.Add(btnDaftar);
             Controls.Add(tbUsername);
             Controls.Add(tbKonfirmasiPassword);
             Controls.Add(tbPassword);
@@ -129,6 +151,7 @@
         private TextBox tbPassword;
         private TextBox tbKonfirmasiPassword;
         private TextBox tbUsername;
-        private Button btnDatar;
+        private Button btnDaftar;
+        private Button btnKeluar;
     }
 }
