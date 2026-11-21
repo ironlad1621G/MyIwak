@@ -28,15 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            sidebar1 = new SidebarOwner();
+            sidebarOwner1 = new SidebarOwner();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
             SuspendLayout();
             // 
-            // sidebar1
+            // sidebarOwner1
             // 
-            sidebar1.Location = new Point(-4, -29);
-            sidebar1.Name = "sidebar1";
-            sidebar1.Size = new Size(497, 1080);
-            sidebar1.TabIndex = 0;
+            sidebarOwner1.Location = new Point(-3, -30);
+            sidebarOwner1.Name = "sidebarOwner1";
+            sidebarOwner1.Size = new Size(497, 1080);
+            sidebarOwner1.TabIndex = 0;
+            sidebarOwner1.Load += sidebarOwner1_Load;
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(623, 190);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(425, 154);
+            panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(623, 384);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(425, 154);
+            panel2.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            panel3.Location = new Point(623, 580);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(425, 154);
+            panel3.TabIndex = 2;
             // 
             // FormDashboardOwner
             // 
@@ -44,7 +69,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.DashboardOwner;
             ClientSize = new Size(1904, 1041);
-            Controls.Add(sidebar1);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(sidebarOwner1);
             Name = "FormDashboardOwner";
             Text = "FormDashboardOwner";
             ResumeLayout(false);
@@ -53,5 +81,9 @@
         #endregion
 
         private SidebarOwner sidebar1;
+        private SidebarOwner sidebarOwner1;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
     }
 }

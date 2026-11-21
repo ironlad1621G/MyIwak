@@ -1,6 +1,6 @@
 ﻿namespace MyMyIwak.Views
 {
-    partial class Sidebar
+    partial class SidebarOwner
     {
         /// <summary> 
         /// Required designer variable.

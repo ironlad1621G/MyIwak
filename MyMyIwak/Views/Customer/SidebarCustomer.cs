@@ -14,5 +14,35 @@ namespace MyMyIwak.Views.Customer
         {
             InitializeComponent();
         }
+
+        private void sidebar1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKeranjang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRiwayatTransaksi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProfilSaya_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

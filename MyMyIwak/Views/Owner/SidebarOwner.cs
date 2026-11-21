@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace MyMyIwak.Views
 {
-    public partial class Sidebar : UserControl
+    public partial class SidebarOwner : UserControl
     {
-        public Sidebar()
+        public SidebarOwner()
         {
             InitializeComponent();
         }
@@ -37,7 +37,7 @@ namespace MyMyIwak.Views
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
