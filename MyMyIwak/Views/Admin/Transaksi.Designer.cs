@@ -28,12 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Transaksi";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transaksi));
+            sidebarAdmin1 = new SidebarAdmin();
+            this.transaksi1 = new Panel();
+            this.transaksi2 = new Panel();
+            transaksi3 = new Panel();
+            SuspendLayout();
+            // 
+            // sidebarAdmin1
+            // 
+            sidebarAdmin1.Location = new Point(0, 0);
+            sidebarAdmin1.Name = "sidebarAdmin1";
+            sidebarAdmin1.Size = new Size(497, 1080);
+            sidebarAdmin1.TabIndex = 0;
+            // 
+            // transaksi1
+            // 
+            this.transaksi1.Location = new Point(573, 175);
+            this.transaksi1.Name = "transaksi1";
+            this.transaksi1.Size = new Size(283, 133);
+            this.transaksi1.TabIndex = 1;
+            // 
+            // transaksi2
+            // 
+            this.transaksi2.Location = new Point(930, 175);
+            this.transaksi2.Name = "transaksi2";
+            this.transaksi2.Size = new Size(283, 133);
+            this.transaksi2.TabIndex = 2;
+            // 
+            // transaksi3
+            // 
+            transaksi3.Location = new Point(1286, 175);
+            transaksi3.Name = "transaksi3";
+            transaksi3.Size = new Size(283, 133);
+            transaksi3.TabIndex = 3;
+            // 
+            // Transaksi
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1904, 1041);
+            Controls.Add(transaksi3);
+            Controls.Add(this.transaksi2);
+            Controls.Add(this.transaksi1);
+            Controls.Add(sidebarAdmin1);
+            Name = "Transaksi";
+            Text = "Transaksi";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private SidebarAdmin sidebarAdmin1;
+        private Panel transaksi1;
+        private Panel transaksi2;
+        private Panel transaksi3;
     }
 }

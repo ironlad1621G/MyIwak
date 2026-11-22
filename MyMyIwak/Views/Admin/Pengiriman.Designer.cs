@@ -28,12 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Pengiriman";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pengiriman));
+            sidebarAdmin1 = new SidebarAdmin();
+            SuspendLayout();
+            // 
+            // sidebarAdmin1
+            // 
+            sidebarAdmin1.Location = new Point(0, 0);
+            sidebarAdmin1.Name = "sidebarAdmin1";
+            sidebarAdmin1.Size = new Size(497, 1080);
+            sidebarAdmin1.TabIndex = 0;
+            // 
+            // Pengiriman
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1904, 1041);
+            Controls.Add(sidebarAdmin1);
+            Name = "Pengiriman";
+            Text = "Pengiriman";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private SidebarAdmin sidebarAdmin1;
     }
 }

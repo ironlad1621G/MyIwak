@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace MyMyIwak.Views.Customer
 {
-    public partial class Form1 : Form
+    public partial class dashboardcustomer : Form
     {
-        public Form1()
+        public dashboardcustomer()
         {
             InitializeComponent();
         }
