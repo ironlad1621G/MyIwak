@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace MyMyIwak.Views.Admin
 {
-    public partial class Form1 : Form
+    public partial class Pengiriman : Form
     {
-        public Form1()
+        public Pengiriman()
         {
             InitializeComponent();
         }
