@@ -8,11 +8,21 @@ using System.Windows.Forms;
 
 namespace MyMyIwak.Views.Owner
 {
-    public partial class Form1 : Form
+    public partial class KelolaAkunAdmin : Form
     {
-        public Form1()
+        public KelolaAkunAdmin()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalAdmin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,6 +32,15 @@
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            lblTotalAdmin = new Label();
+            lblTotalVarianIkan = new Label();
+            lblTotalStokIkan = new Label();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // sidebarOwner1
@@ -44,6 +53,9 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(lblTotalAdmin);
+            panel1.Controls.Add(label1);
             panel1.Location = new Point(623, 190);
             panel1.Name = "panel1";
             panel1.Size = new Size(425, 154);
@@ -51,17 +63,93 @@
             // 
             // panel2
             // 
-            panel2.Location = new Point(623, 384);
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(lblTotalVarianIkan);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(623, 400);
             panel2.Name = "panel2";
             panel2.Size = new Size(425, 154);
             panel2.TabIndex = 2;
+            panel2.Paint += panel2_Paint;
             // 
             // panel3
             // 
-            panel3.Location = new Point(623, 580);
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(lblTotalStokIkan);
+            panel3.Controls.Add(label3);
+            panel3.Location = new Point(623, 614);
             panel3.Name = "panel3";
             panel3.Size = new Size(425, 154);
             panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(68, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(178, 30);
+            label1.TabIndex = 0;
+            label1.Text = "Total Akun Admin";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(68, 24);
+            label2.Name = "label2";
+            label2.Size = new Size(165, 30);
+            label2.TabIndex = 1;
+            label2.Text = "Total Varian Ikan";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(68, 28);
+            label3.Name = "label3";
+            label3.Size = new Size(147, 30);
+            label3.TabIndex = 2;
+            label3.Text = "Total Stok Ikan";
+            // 
+            // lblTotalAdmin
+            // 
+            lblTotalAdmin.AutoSize = true;
+            lblTotalAdmin.BackColor = Color.Transparent;
+            lblTotalAdmin.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotalAdmin.Location = new Point(68, 63);
+            lblTotalAdmin.Name = "lblTotalAdmin";
+            lblTotalAdmin.Size = new Size(54, 65);
+            lblTotalAdmin.TabIndex = 1;
+            lblTotalAdmin.Text = "0";
+            lblTotalAdmin.Click += lblTotalAdmin_Click;
+            // 
+            // lblTotalVarianIkan
+            // 
+            lblTotalVarianIkan.AutoSize = true;
+            lblTotalVarianIkan.BackColor = Color.Transparent;
+            lblTotalVarianIkan.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotalVarianIkan.Location = new Point(68, 69);
+            lblTotalVarianIkan.Name = "lblTotalVarianIkan";
+            lblTotalVarianIkan.Size = new Size(54, 65);
+            lblTotalVarianIkan.TabIndex = 2;
+            lblTotalVarianIkan.Text = "0";
+            lblTotalVarianIkan.Click += lblTotalVarianIkan_Click;
+            // 
+            // lblTotalStokIkan
+            // 
+            lblTotalStokIkan.AutoSize = true;
+            lblTotalStokIkan.BackColor = Color.Transparent;
+            lblTotalStokIkan.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotalStokIkan.Location = new Point(68, 72);
+            lblTotalStokIkan.Name = "lblTotalStokIkan";
+            lblTotalStokIkan.Size = new Size(54, 65);
+            lblTotalStokIkan.TabIndex = 3;
+            lblTotalStokIkan.Text = "0";
+            lblTotalStokIkan.Click += lblTotalStokIkan_Click;
             // 
             // FormDashboardOwner
             // 
@@ -75,6 +163,13 @@
             Controls.Add(sidebarOwner1);
             Name = "FormDashboardOwner";
             Text = "FormDashboardOwner";
+            Load += FormDashboardOwner_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -85,5 +180,11 @@
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
+        private Label label1;
+        private Label lblTotalAdmin;
+        private Label label2;
+        private Label label3;
+        private Label lblTotalVarianIkan;
+        private Label lblTotalStokIkan;
     }
 }
