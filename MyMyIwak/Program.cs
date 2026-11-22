@@ -9,6 +9,6 @@ internal static class Program
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
-        Application.Run(new FormTampilanAwal());
+        Application.Run(new FormDashboardOwner());
     }
 }

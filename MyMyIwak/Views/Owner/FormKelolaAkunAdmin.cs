@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace MyMyIwak.Views.Owner
 {
-    public partial class KelolaAkunAdmin : Form
+    public partial class FormKelolaAkunAdmin : Form
     {
-        public KelolaAkunAdmin()
+        public FormKelolaAkunAdmin()
         {
             InitializeComponent();
         }

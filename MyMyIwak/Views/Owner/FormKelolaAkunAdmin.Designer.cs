@@ -1,6 +1,6 @@
 ﻿namespace MyMyIwak.Views.Owner
 {
-    partial class KelolaAkunAdmin
+    partial class FormKelolaAkunAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,8 @@
         {
             sidebarOwner1 = new SidebarOwner();
             panel1 = new Panel();
-            label1 = new Label();
             lblTotalAdmin = new Label();
+            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,17 +52,6 @@
             panel1.Size = new Size(425, 154);
             panel1.TabIndex = 2;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(67, 17);
-            label1.Name = "label1";
-            label1.Size = new Size(178, 30);
-            label1.TabIndex = 3;
-            label1.Text = "Total Akun Admin";
-            // 
             // lblTotalAdmin
             // 
             lblTotalAdmin.AutoSize = true;
@@ -75,7 +64,18 @@
             lblTotalAdmin.Text = "0";
             lblTotalAdmin.Click += lblTotalAdmin_Click;
             // 
-            // KelolaAkunAdmin
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(67, 17);
+            label1.Name = "label1";
+            label1.Size = new Size(178, 30);
+            label1.TabIndex = 3;
+            label1.Text = "Total Akun Admin";
+            // 
+            // FormKelolaAkunAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -83,7 +83,7 @@
             ClientSize = new Size(1904, 1041);
             Controls.Add(panel1);
             Controls.Add(sidebarOwner1);
-            Name = "KelolaAkunAdmin";
+            Name = "FormKelolaAkunAdmin";
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
