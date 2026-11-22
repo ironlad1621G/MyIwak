@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using MyMyIwak.Views.Admin;
+using MyMyIwak.Views;
 
 internal static class Program
 {
@@ -10,7 +10,7 @@ internal static class Program
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
-        Application.Run(new KelolaInventarisIkan());
+        Application.Run(new FormTampilanAwal());
 
     }
 }
