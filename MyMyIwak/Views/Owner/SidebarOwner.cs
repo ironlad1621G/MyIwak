@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MyMyIwak.Views
@@ -15,29 +10,36 @@ namespace MyMyIwak.Views
             InitializeComponent();
         }
 
+        private void PindahHalaman(Form formTujuan)
+        {
+            using (formTujuan)
+            {
+                formTujuan.ShowDialog(this.FindForm());
+            }
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-
+            PindahHalaman(new FormDashboardOwner());
         }
 
         private void btnKelolaAkunAdmin_Click(object sender, EventArgs e)
         {
-
+            PindahHalaman(new Owner.FormKelolaAkunAdmin());
         }
 
         private void btnKelolaInventarisIkan_Click(object sender, EventArgs e)
         {
-
+            PindahHalaman(new Owner.FormKelolaInventarisIkan());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            
+            PindahHalaman(new FormLogin());
         }
     }
 }
