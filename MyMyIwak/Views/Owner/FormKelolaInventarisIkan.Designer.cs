@@ -38,6 +38,18 @@ namespace MyMyIwak.Views.Owner
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             edit = new DataGridViewButtonColumn();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            inventaris1.SuspendLayout();
+            inventaris2.SuspendLayout();
+            inventaris3.SuspendLayout();
+            panel4.SuspendLayout();
             panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvIkan).BeginInit();
             SuspendLayout();
@@ -51,6 +63,9 @@ namespace MyMyIwak.Views.Owner
             // 
             // inventaris1
             // 
+            inventaris1.BackColor = Color.Transparent;
+            inventaris1.Controls.Add(label2);
+            inventaris1.Controls.Add(label1);
             inventaris1.Location = new Point(562, 192);
             inventaris1.Name = "inventaris1";
             inventaris1.Size = new Size(255, 118);
@@ -58,6 +73,9 @@ namespace MyMyIwak.Views.Owner
             // 
             // inventaris2
             // 
+            inventaris2.BackColor = Color.Transparent;
+            inventaris2.Controls.Add(label4);
+            inventaris2.Controls.Add(label3);
             inventaris2.Location = new Point(853, 192);
             inventaris2.Name = "inventaris2";
             inventaris2.Size = new Size(255, 118);
@@ -65,6 +83,9 @@ namespace MyMyIwak.Views.Owner
             // 
             // inventaris3
             // 
+            inventaris3.BackColor = Color.Transparent;
+            inventaris3.Controls.Add(label7);
+            inventaris3.Controls.Add(label5);
             inventaris3.Location = new Point(1142, 192);
             inventaris3.Name = "inventaris3";
             inventaris3.Size = new Size(255, 118);
@@ -72,6 +93,9 @@ namespace MyMyIwak.Views.Owner
             // 
             // panel4
             // 
+            panel4.BackColor = Color.Transparent;
+            panel4.Controls.Add(label8);
+            panel4.Controls.Add(label6);
             panel4.Location = new Point(1432, 192);
             panel4.Name = "panel4";
             panel4.Size = new Size(255, 118);
@@ -197,6 +221,86 @@ namespace MyMyIwak.Views.Owner
             edit.Text = "Edit";
             edit.UseColumnTextForButtonValue = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
+            label1.Location = new Point(18, 15);
+            label1.Name = "label1";
+            label1.Size = new Size(170, 25);
+            label1.TabIndex = 5;
+            label1.Text = "TOTAL JENIS IKAN";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 22F, FontStyle.Bold);
+            label2.Location = new Point(18, 54);
+            label2.Name = "label2";
+            label2.Size = new Size(35, 41);
+            label2.TabIndex = 6;
+            label2.Text = "0";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
+            label3.Location = new Point(23, 15);
+            label3.Name = "label3";
+            label3.Size = new Size(205, 25);
+            label3.TabIndex = 7;
+            label3.Text = "TOTAL STOK TERSEDIA";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 22F, FontStyle.Bold);
+            label4.Location = new Point(23, 54);
+            label4.Name = "label4";
+            label4.Size = new Size(35, 41);
+            label4.TabIndex = 7;
+            label4.Text = "0";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
+            label5.Location = new Point(24, 15);
+            label5.Name = "label5";
+            label5.Size = new Size(160, 25);
+            label5.TabIndex = 8;
+            label5.Text = "BARANG MASUK";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
+            label6.Location = new Point(26, 15);
+            label6.Name = "label6";
+            label6.Size = new Size(163, 25);
+            label6.TabIndex = 9;
+            label6.Text = "BARANG KELUAR";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 22F, FontStyle.Bold);
+            label7.Location = new Point(24, 54);
+            label7.Name = "label7";
+            label7.Size = new Size(35, 41);
+            label7.TabIndex = 8;
+            label7.Text = "0";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 22F, FontStyle.Bold);
+            label8.Location = new Point(26, 54);
+            label8.Name = "label8";
+            label8.Size = new Size(35, 41);
+            label8.TabIndex = 9;
+            label8.Text = "0";
+            // 
             // FormKelolaInventarisIkan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -212,6 +316,14 @@ namespace MyMyIwak.Views.Owner
             Controls.Add(sidebarOwner1);
             Name = "FormKelolaInventarisIkan";
             Text = "FormKelolaInventarisIkan";
+            inventaris1.ResumeLayout(false);
+            inventaris1.PerformLayout();
+            inventaris2.ResumeLayout(false);
+            inventaris2.PerformLayout();
+            inventaris3.ResumeLayout(false);
+            inventaris3.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvIkan).EndInit();
@@ -237,5 +349,13 @@ namespace MyMyIwak.Views.Owner
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewButtonColumn edit;
+        private Label label2;
+        private Label label1;
+        private Label label4;
+        private Label label3;
+        private Label label7;
+        private Label label5;
+        private Label label8;
+        private Label label6;
     }
 }

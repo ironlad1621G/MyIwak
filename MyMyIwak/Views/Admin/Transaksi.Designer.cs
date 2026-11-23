@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transaksi));
             sidebarAdmin1 = new SidebarAdmin();
-            this.transaksi1 = new Panel();
-            this.transaksi2 = new Panel();
+            transaksi1 = new Panel();
+            transaksi2 = new Panel();
             transaksi3 = new Panel();
             SuspendLayout();
             // 
@@ -44,20 +44,23 @@
             // 
             // transaksi1
             // 
-            this.transaksi1.Location = new Point(573, 175);
-            this.transaksi1.Name = "transaksi1";
-            this.transaksi1.Size = new Size(283, 133);
-            this.transaksi1.TabIndex = 1;
+            transaksi1.BackColor = Color.Transparent;
+            transaksi1.Location = new Point(573, 175);
+            transaksi1.Name = "transaksi1";
+            transaksi1.Size = new Size(283, 133);
+            transaksi1.TabIndex = 1;
             // 
             // transaksi2
             // 
-            this.transaksi2.Location = new Point(930, 175);
-            this.transaksi2.Name = "transaksi2";
-            this.transaksi2.Size = new Size(283, 133);
-            this.transaksi2.TabIndex = 2;
+            transaksi2.BackColor = Color.Transparent;
+            transaksi2.Location = new Point(930, 175);
+            transaksi2.Name = "transaksi2";
+            transaksi2.Size = new Size(283, 133);
+            transaksi2.TabIndex = 2;
             // 
             // transaksi3
             // 
+            transaksi3.BackColor = Color.Transparent;
             transaksi3.Location = new Point(1286, 175);
             transaksi3.Name = "transaksi3";
             transaksi3.Size = new Size(283, 133);
@@ -70,8 +73,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1904, 1041);
             Controls.Add(transaksi3);
-            Controls.Add(this.transaksi2);
-            Controls.Add(this.transaksi1);
+            Controls.Add(transaksi2);
+            Controls.Add(transaksi1);
             Controls.Add(sidebarAdmin1);
             Name = "Transaksi";
             Text = "Transaksi";
