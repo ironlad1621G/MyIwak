@@ -1,5 +1,4 @@
-﻿
-Host=ep-empty-wildflower-a1fmnou4-pooler.ap-southeast-1.aws.neon.tech;
+﻿Host=ep-empty-wildflower-a1fmnou4-pooler.ap-southeast-1.aws.neon.tech;
 Port=5432;
 Database=MyIwak;
 Username=neondb_owner;
